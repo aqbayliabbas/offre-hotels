@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
     const containerVariants: Variants = {
@@ -25,10 +26,12 @@ export default function Hero() {
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black text-white px-6">
             {/* Background Image & Overlay */}
             <div className="absolute inset-0 z-0">
-                <img
+                <Image
                     src="/hotel_facade_luxury_4_1767018874326.png"
                     alt="Luxury Hotel Exterior"
-                    className="w-full h-full object-cover opacity-40 scale-105"
+                    fill
+                    priority
+                    className="object-cover opacity-40 scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black via-black/60 to-black" />
                 <div className="absolute inset-0 bg-blue-600/5 mix-blend-overlay" />

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const images = [
     "/hotel_room_luxury_1_1767018821447.png",
@@ -38,9 +39,11 @@ export default function GallerySlider() {
                         key={i}
                         className="w-[300px] md:w-[450px] aspect-[16/10] rounded-3xl overflow-hidden border border-white/5 shadow-2xl shrink-0 group"
                     >
-                        <img
+                        <Image
                             src={src}
                             alt={`Gallery ${i}`}
+                            width={450}
+                            height={280}
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[0.2] group-hover:grayscale-0"
                         />
                     </div>

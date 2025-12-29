@@ -10,6 +10,7 @@ import Offer from "../components/Offer";
 import AdditionalServices from "../components/AdditionalServices";
 import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -28,9 +29,9 @@ export default function Home() {
       <footer className="py-16 bg-black border-t border-zinc-900">
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
           <div className="flex items-center gap-12 mb-10 opacity-40 hover:opacity-100 transition-opacity duration-700">
-            <img src="/wingo.svg" alt="Wingo Logo" className="h-5 md:h-6 w-auto brightness-200" />
+            <Image src="/wingo.svg" alt="Wingo Logo" width={100} height={24} className="h-5 md:h-6 w-auto brightness-200" />
             <div className="h-5 w-[1px] bg-zinc-800" />
-            <img src="/auren.svg" alt="Auren Logo" className="h-5 md:h-6 w-auto brightness-200" />
+            <Image src="/auren.svg" alt="Auren Logo" width={100} height={24} className="h-5 md:h-6 w-auto brightness-200" />
           </div>
 
           <p className="text-zinc-600 text-[10px] font-bold uppercase tracking-[0.3em] mb-4">
