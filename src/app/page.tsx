@@ -14,7 +14,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-blue-500/30">
+    <main className="min-h-screen bg-black text-white selection:bg-blue-500/30 overflow-x-hidden">
       <Hero />
       <GallerySlider />
       <Problem />

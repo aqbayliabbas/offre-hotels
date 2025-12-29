@@ -23,13 +23,13 @@ export default function GallerySlider() {
             <motion.div
                 className="flex gap-6 w-max"
                 animate={{
-                    x: [0, -100 * images.length * 8 - (6 * (images.length - 1))], // Rough calculation for width
+                    x: [0, "-50%"],
                 }}
                 transition={{
                     x: {
                         repeat: Infinity,
                         repeatType: "loop",
-                        duration: 30,
+                        duration: 40,
                         ease: "linear",
                     },
                 }}

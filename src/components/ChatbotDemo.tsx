@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
+import { useEffect, useState, useRef } from "react";
 
 const conversation = [
     { role: "client", text: "Bonjour, vous avez des chambres ce weekend ?" },
@@ -15,8 +15,12 @@ const conversation = [
 export default function ChatbotDemo() {
     const [visibleMessages, setVisibleMessages] = useState<number>(0);
     const [isTyping, setIsTyping] = useState<boolean>(false);
+    const containerRef = useRef(null);
+    const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
     useEffect(() => {
+        if (!isInView) return;
+
         if (visibleMessages < conversation.length) {
             if (conversation[visibleMessages].role === "bot") {
                 setIsTyping(true);
@@ -35,10 +39,10 @@ export default function ChatbotDemo() {
             const timer = setTimeout(() => setVisibleMessages(0), 10000);
             return () => clearTimeout(timer);
         }
-    }, [visibleMessages]);
+    }, [visibleMessages, isInView]);
 
     return (
-        <div className="w-full max-w-[360px] mx-auto bg-zinc-900 rounded-3xl shadow-2xl border border-zinc-800 overflow-hidden">
+        <div ref={containerRef} className="w-full max-w-[360px] mx-auto bg-zinc-900 rounded-3xl shadow-2xl border border-zinc-800 overflow-hidden">
             <div className="bg-zinc-800 p-4 flex items-center gap-3 border-b border-zinc-700">
                 <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-black text-xs">
                     AI
@@ -63,8 +67,8 @@ export default function ChatbotDemo() {
                         >
                             <div
                                 className={`max-w-[85%] p-3.5 rounded-2xl text-sm font-medium leading-relaxed ${msg.role === "client"
-                                        ? "bg-blue-600 text-white rounded-br-none"
-                                        : "bg-zinc-800 text-zinc-200 rounded-bl-none"
+                                    ? "bg-blue-600 text-white rounded-br-none"
+                                    : "bg-zinc-800 text-zinc-200 rounded-bl-none"
                                     }`}
                             >
                                 {msg.text}
