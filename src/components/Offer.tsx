@@ -90,21 +90,41 @@ export default function Offer() {
                                     </motion.li>
                                 ))}
                             </ul>
-                            <div className="mt-16 pt-10 border-t border-zinc-800">
-                                <div className="flex justify-between items-center text-xs font-bold mb-4">
-                                    <span className="text-zinc-600 uppercase tracking-widest">Maintenance Post-A1</span>
-                                    <span className="text-white">15,000 DA/MOIS</span>
+                            <div className="mt-16 pt-10 border-t border-zinc-800 space-y-6">
+                                <div className="p-6 rounded-3xl bg-zinc-950/50 border border-zinc-800/50 space-y-4">
+                                    <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500 mb-2">Coûts d'Exploitation (Post-An 1)</h4>
+
+                                    <div className="flex justify-between items-center group">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-500/40" />
+                                            <span className="text-xs font-bold text-zinc-400 uppercase tracking-tight">Maintenance Suivi</span>
+                                        </div>
+                                        <span className="text-sm font-black text-white">15,000 DA<span className="text-[10px] text-zinc-600 font-bold">/MOIS</span></span>
+                                    </div>
+
+                                    <div className="flex justify-between items-center group">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-purple-500/40" />
+                                            <span className="text-xs font-bold text-zinc-400 uppercase tracking-tight">Hébergement Cloud</span>
+                                        </div>
+                                        <span className="text-sm font-black text-white">70,000 DA<span className="text-[10px] text-zinc-600 font-bold">/2 ANS</span></span>
+                                    </div>
                                 </div>
-                                <div className="flex justify-between items-center text-xs font-bold mb-6">
-                                    <span className="text-zinc-600 uppercase tracking-widest">Hébergement (An 2+)</span>
-                                    <span className="text-white">70,000 DA/2 ANS</span>
+
+                                <div className="space-y-3 px-2">
+                                    <div className="flex gap-3">
+                                        <div className="w-1 h-1 rounded-full bg-blue-500/20 mt-1.5 shrink-0" />
+                                        <p className="text-[10px] text-zinc-500 leading-relaxed font-medium italic">
+                                            Le chatbot utilise les services <span className="text-zinc-300 font-bold">Google AI</span> (Frais API env. 3k-5k DA/mois selon volume).
+                                        </p>
+                                    </div>
+                                    <div className="flex gap-3">
+                                        <div className="w-1 h-1 rounded-full bg-green-500/20 mt-1.5 shrink-0" />
+                                        <p className="text-[10px] text-zinc-500 leading-relaxed font-medium italic">
+                                            Infrastructure Cloud sécurisée <span className="text-green-500/60 font-bold">incluse la 1ère année</span>.
+                                        </p>
+                                    </div>
                                 </div>
-                                <p className="text-[10px] text-zinc-600 leading-relaxed font-medium italic">
-                                    * Le chatbot utilise les services Google AI ( Frais API env. 3000-5000 DA/mois selon volume).
-                                </p>
-                                <p className="text-[10px] text-zinc-600 leading-relaxed font-medium italic mt-2">
-                                    * Infrastructure Cloud sécurisée incluse la 1ère année.
-                                </p>
                             </div>
                         </div>
                     </div>
