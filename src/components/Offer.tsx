@@ -9,7 +9,6 @@ const inclusions = [
     "Réservation Express (30s)",
     "Système de Fidélité Automatique",
     "Panel de Gestion Complet",
-    "Notifications SMS/WhatsApp",
     "Génération de Factures PDF",
     "Tableau de Bord Statistique",
     "Hébergement Première Année",
