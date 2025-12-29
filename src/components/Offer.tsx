@@ -84,8 +84,8 @@ export default function Offer() {
                                         className="flex items-center gap-4 text-sm font-bold text-zinc-300"
                                     >
                                         <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 border ${item.icon === Plus
-                                                ? "bg-green-500/20 border-green-500/40 shadow-[0_0_10px_rgba(34,197,94,0.2)]"
-                                                : "bg-blue-500/20 border-blue-500/40"
+                                            ? "bg-green-500/20 border-green-500/40 shadow-[0_0_10px_rgba(34,197,94,0.2)]"
+                                            : "bg-blue-500/20 border-blue-500/40"
                                             }`}>
                                             <item.icon className={
                                                 item.icon === Plus

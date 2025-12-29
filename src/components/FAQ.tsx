@@ -18,12 +18,12 @@ const faqs = [
         a: "Non. Il est programmé spécifiquement pour les réservations hôtelières et suit des directives strictes définies avec vous.",
     },
     {
-        q: "Mes clients doivent créer un compte ?",
-        a: "Non, c'est optionnel. Mais avec un compte, ils réservent en 30 secondes et accumulent des points de fidélité.",
+        q: "J'ai déjà un système local, pouvez-vous l'intégrer ?",
+        a: "Absolument. Nous pouvons synchroniser notre solution avec vos outils actuels ou importer vos données pour assurer une transition fluide sans perte d'historique.",
     },
     {
-        q: "Je n'ai pas de site web ?",
-        a: "Ce n'est pas un problème. Le système fonctionne seul. Vous partagez simplement le lien sur vos réseaux sociaux.",
+        q: "Pouvez-vous ajouter d'autres modules (cafétéria, etc.) ?",
+        a: "Oui, notre système est évolutif. Nous pouvons développer et intégrer des modules sur mesure pour la gestion de votre cafétéria, buanderie ou tout autre service spécifique.",
     },
 ];
 

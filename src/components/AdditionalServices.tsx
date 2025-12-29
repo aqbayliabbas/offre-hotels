@@ -14,7 +14,7 @@ const services = [
         icon: Camera,
         title: "Shooting & Film Making",
         description: "Capturer l'essence de l'Hôtel Kyrline avec des visuels cinématographiques et une photographie de luxe.",
-        features: ["Drone 4K", "Photos d'Intérieur", "Vidéo Promotionnelle"]
+        features: ["Vidéos cinématographiques", "Photos d'Intérieur", "Vidéos Promotionnelles"]
     },
     {
         icon: Users,
